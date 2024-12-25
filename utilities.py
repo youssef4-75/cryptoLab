@@ -27,3 +27,7 @@ def getChar(i: int, maj: bool=False):
     if i == -1: return " "
     if maj: return ALPHAMAJ[i%mod]
     return ALPHAMIN[i%mod]
+
+
+def translate(letter:str, cipher:str):
+    return getChar(getNum(letter) + getNum(cipher))
