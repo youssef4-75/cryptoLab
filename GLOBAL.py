@@ -1,0 +1,5 @@
+
+
+ALPHAMAJ = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+ALPHAMIN = "abcdefghijklmnopqrstuvwxyz"
+
