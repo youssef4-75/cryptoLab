@@ -1,4 +1,5 @@
 from GLOBAL import ALPHAMAJ, ALPHAMIN
+from icecream import ic
 
 def getNum(char: str):
     """
@@ -29,5 +30,12 @@ def getChar(i: int, maj: bool=False):
     return ALPHAMIN[i%mod]
 
 
-def translate(letter:str, cipher:str):
-    return getChar(getNum(letter) + getNum(cipher))
+def translate(letter:str, cipher:str|int):
+    if not letter.isalpha(): 
+        return letter
+    elif isinstance(cipher, int):
+        i = cipher
+    else:
+        i = getNum(cipher)
+    return getChar(getNum(letter) + i)
+

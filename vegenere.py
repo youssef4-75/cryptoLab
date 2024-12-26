@@ -1,43 +1,24 @@
-from utilities import getChar, getNum
-from Chiffres import cstr
+from utilities import getChar, getNum, translate
+from Chiffres import Cipher
 from test import CHALLENGE
 
-def Vegenere(txt: str, cipher: str, quotient: int=1):
-    res = cstr("")
-    k = 0
-    n = len(cipher)
-    for c in txt:
-        if not c.isalpha(): res += c
-        else: 
-            shift = getNum(cipher[k])
-            res += getChar(getNum(c) + quotient*shift)
-        k = (k+1)%n
-    return res
 
-def chiffrerVegenere(txt: str, cipher: str):
-    return Vegenere(txt, cipher)
+def chiffrerVigener(text, key):
+    Ctext = Cipher(text)
+    Ctext.shift_all(key)
+    return Ctext.get_support()
 
-def dechiffrerVegenere(txt: str, cipher: str):
-    return Vegenere(txt, cipher, -1)
+def dechiffrerVigenere(text, key):
+    key = Cipher.complement(key)
+    return chiffrerVigener(text, key)
 
 
-
-
-
-# print(
-
-# getChar(getNum('m') + getNum('v'))
-
-# )
-
-# exit()
 
 if __name__ == "__main__":
-    # print(CHALLENGE[0])
+    # print(translate("i", "o"))
 
-    print(
-        getChar(getNum("m") + getNum("v"))
-    )
-
-    print(dechiffrerVegenere(CHALLENGE[0], "v"))
-
+    key = "vigenere"
+    plainText = "here"
+    res = chiffrerVigener(plainText, key)
+    print(res)
+    print(dechiffrerVigenere(res, key))

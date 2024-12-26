@@ -1,1 +1,1 @@
-from cstr import Cstr
+from .cipher import Cipher
