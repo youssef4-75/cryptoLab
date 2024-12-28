@@ -18,7 +18,13 @@ if __name__ == "__main__":
     # print(translate("i", "o"))
 
     key = "vigenere"
-    plainText = "here"
+    plainText = "here land the mystery"
     res = chiffrerVigener(plainText, key)
     print(res)
     print(dechiffrerVigenere(res, key))
+
+    k = Cipher("here land the mystery")
+    k.shift_all(2, 2)
+    print(k)
+    k.shift_all(24, 4)
+    print(k)
