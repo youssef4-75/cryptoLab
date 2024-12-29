@@ -2,7 +2,14 @@ from vigenere import chiffrerVigener as chv, dechiffrerVigenere as dcv
 from caesar import chiffrerCaesar as chc
 from multi_layer import chiffrerMultilayer as chm, deChiffrerMultilayer as dcm
 
-text = """c un text test, drto bach njareb cryptoLab, next key howa crypto, ila drti next key o dechiffriti had l hadra ta hiya mzn, wsalti l lvl2, next key hiya 23, kyn github diali fih cryptoLab howa li knkhdem bih bach nchiffri o ndechiffri dkchi li knkteb, next howa llm, ghatban lik hadi m3a9da cwiya mais hadi ghir tjriba
+
+# remember that if you wrote your 
+# text in the second line the first 
+# caracter is the \n that you used to 
+# go to the second line
+
+
+text = """
 """
 
 crypto_mode = 3
