@@ -8,15 +8,23 @@ from multi_layer import chiffrerMultilayer as chm, deChiffrerMultilayer as dcm
 # caracter is the \n that you used to 
 # go to the second line
 
+"""
+-\+ 1: to use the vigenere method, 
+-\+ 2: to use the caesar method, 
+-\+ 3: to use the multilayer method
+
+negative sign to decrypt it
+
+see the function documentation to know how it work
+"""
+
 
 text = """
 """
 
-crypto_mode = 3
+crypto_mode = 0
 
 param = [
-    ["aseds", "crypto", 23],
-    [[0, 800], [70, 2400], [20, 2301]]
 ]
 
 kwds = {
